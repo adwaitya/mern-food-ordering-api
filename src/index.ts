@@ -11,6 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+// enforce on all endpoints
 app.use('/api/user', userRoute);
 
 app.listen(8000, () => {
