@@ -12,6 +12,9 @@ app.use(express.json());
 app.use(cors());
 
 // enforce on all endpoints
+app.get('/health', async(req:Request, res:Response) => {
+    res.send({message:'health OK!'})
+})
 app.use('/api/user', userRoute);
 
 app.listen(8000, () => {
